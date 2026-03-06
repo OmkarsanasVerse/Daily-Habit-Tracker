@@ -46,3 +46,7 @@ json{
   "done": false,
   "streak": 5
 }
+  📁 habit-tracker/
+├── index.html    →  Structure & layout only
+├── style.css     →  All styling, variables & animations
+└── script.js     →  All logic, data & event handling
