@@ -7,9 +7,13 @@ A single-file, client-side web app built with pure HTML, CSS, and JavaScript —
 🎨 Design & Aesthetics
 
   📁 habit-tracker/
+  
 ├── index.html    →  Structure & layout only
+
 ├── style.css     →  All styling, variables & animations
+
 └── script.js     →  All logic, data & event handling
+
 
 
 Theme: Dark luxury — deep charcoal background with gold accents
