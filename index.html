@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Habit Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <div class="eyebrow">Your Personal Ritual</div>
+      <h1>Daily Habits</h1>
+      <div class="date-badge" id="dateBadge">📅 <span></span></div>
+    </header>
+
+    <!-- Week Strip -->
+    <div class="week-strip" id="weekStrip"></div>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <div class="stat">
+        <div class="stat-value" id="statTotal">0</div>
+        <div class="stat-label">Total Habits</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" id="statDone">0</div>
+        <div class="stat-label">Completed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" id="statStreak">0</div>
+        <div class="stat-label">Best Streak 🔥</div>
+      </div>
+    </div>
+
+    <!-- Progress Ring -->
+    <div class="progress-section">
+      <div class="ring-wrap">
+        <svg class="ring-svg" viewBox="0 0 120 120">
+          <defs>
+            <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#e8c96b"/>
+              <stop offset="100%" stop-color="#c9a84c"/>
+            </linearGradient>
+          </defs>
+          <circle class="ring-bg" cx="60" cy="60" r="51"/>
+          <circle class="ring-fill" id="ringFill" cx="60" cy="60" r="51"/>
+        </svg>
+        <div class="ring-text">
+          <div class="ring-pct" id="ringPct">0%</div>
+          <div class="ring-sub">done</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Habits Section -->
+    <div class="section-header">
+      <div class="section-title">Today's Rituals</div>
+      <button class="add-btn" onclick="openModal()">＋ Add Habit</button>
+    </div>
+
+    <div class="habits-list" id="habitsList"></div>
+
+  </div>
+
+  <!-- Add Habit Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <h2>New Habit</h2>
+      <div class="form-group">
+        <label>Habit Name</label>
+        <input type="text" id="habitNameInput" placeholder="e.g. Morning meditation…" maxlength="40">
+      </div>
+      <div class="form-group">
+        <label>Time of Day</label>
+        <input type="text" id="habitTimeInput" placeholder="e.g. 7:00 AM">
+      </div>
+      <div class="form-group">
+        <label>Color</label>
+        <div class="color-picker" id="colorPicker"></div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
+        <button class="btn btn-primary" onclick="addHabit()">Add Ritual</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
